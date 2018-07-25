@@ -1,5 +1,10 @@
 package model;
 
+/**
+ * Board class represents an 8x8 2-d array of square objects.
+ * @author Bryan Secoy
+ * @version 1.0
+ */
 public class Board {
 
     private Square[][] board;
