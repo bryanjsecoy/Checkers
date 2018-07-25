@@ -11,16 +11,16 @@ public class CheckersGame {
     private Board board;
     private Player redPlayer;
     private Player blackPlayer;
-    public static final int BLACK = 0;
-    public static final int RED = 1;
+    private static final int BLACK = 0;
+    private static final int RED = 1;
 
     /**
      * CheckersGame - Default constructor
      */
     public CheckersGame() {
         board = Board.getBoard();
-        redPlayer = new Player(0);
-        blackPlayer = new Player(1);
+        redPlayer = new Player(RED);
+        blackPlayer = new Player(BLACK);
     }
 
     /**
@@ -38,10 +38,16 @@ public class CheckersGame {
      * @return the Player
      */
     public Player getPlayer(int which) {
-        Player choice = redPlayer;
+        Player choice;
 
-        if (which == 0)
+        if (which == BLACK)
             choice = blackPlayer;
+        else if (which == RED) {
+            choice = redPlayer;
+        }
+        else {
+            choice = null;
+        }
 
         return choice;
     }
