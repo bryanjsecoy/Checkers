@@ -40,4 +40,14 @@ public class PlayerTest {
         pOne.loseChecker(1);
         assertEquals(11, pOne.getNumCheckers());
     }
+
+    @Test
+    public void setNumCheckersTest() {
+        pOne = new Player(BLACK);
+        assertEquals(12, pOne.getNumCheckers());
+        pOne.setNumCheckers(5);
+        assertEquals(5, pOne.getNumCheckers());
+        pOne.setNumCheckers(40);
+        assertEquals(0, pOne.getNumCheckers());
+    }
 }

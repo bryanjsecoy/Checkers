@@ -19,7 +19,6 @@ public class Player {
         if (color > -1 && color < 2) {
             this.color = color;
         } else {
-            System.out.println("Must use player 1 or 2 only");
             this.color = -1;
         }
         this.numCheckers = startingNumCheckers;
@@ -58,6 +57,10 @@ public class Player {
      * @param numCheckers - The number of checkers being set
      */
     public void setNumCheckers(int numCheckers) {
-        this.numCheckers = numCheckers;
+        if (numCheckers > -1 && numCheckers < 13) {
+            this.numCheckers = numCheckers;
+        } else {
+            this.numCheckers = 0;
+        }
     }
 }
