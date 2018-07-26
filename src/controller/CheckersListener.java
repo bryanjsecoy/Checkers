@@ -14,20 +14,16 @@ import java.awt.event.WindowListener;
  * @version 1
  */
 public class CheckersListener extends WindowAdapter implements WindowListener {
-    private CheckersGame game;
-    private CheckersGUI frame;
-    private Player human;
-    private Player computer;
 
     /**
      * Explicit value constructor
      * @param frame - The frame
      */
     public CheckersListener(CheckersGUI frame) {
-        this.frame = frame;
-        game = new CheckersGame();
-        human = game.getPlayer(1);
-        computer = game.getPlayer(0);
+        CheckersGUI frame1 = frame;
+        CheckersGame game = new CheckersGame();
+        Player human = game.getPlayer(1);
+        Player computer = game.getPlayer(0);
     }
     
     public void WindowClosing(WindowEvent event) {

@@ -22,7 +22,7 @@ public class BoardDataTest {
 
     @Test
     public void getSquareTest() {
-        Square square = boardData.getSquare(0,0);
+        int square = boardData.getSquare(0,0);
         assertNotNull(square);
     }
 
