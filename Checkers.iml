@@ -17,5 +17,7 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="IntelliJ IDEA GridLayout" level="project" />
+    <orderEntry type="library" name="MigLayout" level="project" />
   </component>
 </module>

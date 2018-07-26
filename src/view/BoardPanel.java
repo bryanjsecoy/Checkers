@@ -21,13 +21,22 @@ class BoardPanel {
 
             for (int col = 0; col < 8; col+=2) {
                 if (row % 2 == 0) {
-                    boardPanel.setBackground(Color.WHITE);
-                    boardPanel.setBackground(Color.BLACK);
+                    JPanel panel = new JPanel();
+                    JPanel panelTwo = new JPanel();
+                    panel.setBackground(Color.WHITE);
+                    panelTwo.setBackground(Color.BLACK);
+                    boardPanel.add(panel);
+                    boardPanel.add(panelTwo);
+
                 }
                 // Odd numbered rows (b,w,b,w,b,w,b,w)
                 else {
-                    boardPanel.setBackground(Color.BLACK);
-                    boardPanel.setBackground(Color.WHITE);
+                    JPanel panel = new JPanel();
+                    JPanel panelTwo = new JPanel();
+                    panel.setBackground(Color.BLACK);
+                    panelTwo.setBackground(Color.WHITE);
+                    boardPanel.add(panel);
+                    boardPanel.add(panelTwo);
                 }
             }
         }

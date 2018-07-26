@@ -19,14 +19,14 @@ public class CheckersGUI extends JFrame {
     public CheckersGUI() {
         this.setTitle("Checkers");
         createComponents();
-
+        this.setSize(500,500);
         boardPanel = new BoardPanel();
         setPanels();
         addListeners();
         this.addWindowListener(listener);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setContentPane(mainPanel);
-        pack();
+        //pack();
         setVisible(true);
     }
 
