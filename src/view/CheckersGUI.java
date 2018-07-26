@@ -1,28 +1,53 @@
 package view;
 
 import javax.swing.*;
-
-import Checkers.Checkers;
 import controller.CheckersListener;
 
-import java.awt.*;
+/**
+ * CheckersGUI class is the graphical piece of the game.
+ * @author Bryan Secoy
+ * @version 1.0
+ */
+public class CheckersGUI extends JFrame {
+    private BoardPanel boardPanel;          // Displays the checker board
+    private CheckersListener listener;      // Listener for interacting
+    private JPanel mainPanel;               // Holds the boardPanel
 
-public class CheckersGUI extends JPanel {
-
+    /**
+     * Constructor
+     */
     public CheckersGUI() {
+        this.setTitle("Checkers");
+        createComponents();
+
+        boardPanel = new BoardPanel();
         setPanels();
-    } // End Default Constructor
+        addListeners();
+        this.addWindowListener(listener);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setContentPane(mainPanel);
+        pack();
+        setVisible(true);
+    }
+
+    private void addListeners() {
+    }
+
+    private void createComponents() {
+        mainPanel = new JPanel();
+        listener = new CheckersListener(this);
+    }
+
+    /**
+     * getBoardPanel - getter method for BoardPanel
+     * @return boardPanel
+     */
+    public BoardPanel getBoardPanel() {
+        return this.boardPanel;
+    }
 
     private void setPanels() {
-        JFrame window = new JFrame("Checkers");
-        Checkers content = new Checkers();
-        //window.setContentPane(content);
-        window.pack();
-        Dimension screensize = Toolkit.getDefaultToolkit().getScreenSize();
-        window.setLocation( (screensize.width - window.getWidth())/2,
-                (screensize.height - window.getHeight())/2 );
-        window.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
-        window.setResizable(false);
-        window.setVisible(true);
+        mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.X_AXIS));
+        mainPanel.add(boardPanel.getBoardPanel());
     }
 }
