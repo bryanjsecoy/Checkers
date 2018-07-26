@@ -1,29 +1,28 @@
 package Test;
 
-import model.Board;
-import model.Square;
+import model.BoardData;
 import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class BoardTest {
+public class BoardDataTest {
 
-    private Board board;
+    private BoardData boardData;
 
     @Before
     public void setup() {
-        board = Board.getBoard();
+        boardData = BoardData.getBoard();
     }
 
     @Test
     public void boardTest() {
-        assertNotNull(board);
+        assertNotNull(boardData);
     }
 
     @Test
     public void getSquareTest() {
-        Square square = board.getSquare(0,0);
+        Square square = boardData.getSquare(0,0);
         assertNotNull(square);
     }
 

@@ -1,7 +1,6 @@
 package Test;
 
 import model.Checker;
-import model.Square;
 import org.junit.Before;
 import org.junit.Test;
 

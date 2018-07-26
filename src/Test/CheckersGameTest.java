@@ -1,6 +1,6 @@
 package Test;
 
-import model.Board;
+import model.BoardData;
 import model.CheckersGame;
 import model.Player;
 import org.junit.Test;
@@ -20,8 +20,8 @@ public class CheckersGameTest {
     @Test
     public void getBoardTest() {
         game = new CheckersGame();
-        Board board = game.getBoard();
-        assertNotNull(board);
+        BoardData boardData = game.getBoardData();
+        assertNotNull(boardData);
     }
 
     @Test

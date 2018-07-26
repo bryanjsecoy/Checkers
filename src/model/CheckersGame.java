@@ -8,7 +8,7 @@ package model;
 public class CheckersGame {
 
     //Declarations
-    private Board board;
+    private BoardData boardData;
     private Player redPlayer;
     private Player blackPlayer;
     private static final int BLACK = 0;
@@ -18,17 +18,17 @@ public class CheckersGame {
      * CheckersGame - Default constructor
      */
     public CheckersGame() {
-        board = Board.getBoard();
+        boardData = BoardData.getBoard();
         redPlayer = new Player(RED);
         blackPlayer = new Player(BLACK);
     }
 
     /**
-     * getBoard - returns the Board object
+     * getBoardData - returns the BoardData object
      * @return boards - the checkerboard
      */
-    public Board getBoard() {
-        return board;
+    public BoardData getBoardData() {
+        return boardData;
     }
 
     /**
