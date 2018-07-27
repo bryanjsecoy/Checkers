@@ -4,6 +4,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.Color;
 
+/**
+ * BoardPanel - JPanel that contains an 8x8 grid, made up of alternating colored panels (The playing board)
+ */
 class BoardPanel extends JPanel{
 
     private JPanel[][] squares;         // Array of JPanels that represent squares on the board
@@ -17,16 +20,6 @@ class BoardPanel extends JPanel{
         paintBoard();
         //drawCheckers();
         setSize(50,50);
-    }
-
-    /**
-     * drawCheckers - toggles on/off checkers based on the provided status
-     * @param row - the row of the checker
-     * @param col - the column of the checker
-     * @param status - true = on, false = off
-     */
-    private void drawCheckers(int row, int col, boolean status) {
-
     }
 
     private void paintBoard() {
