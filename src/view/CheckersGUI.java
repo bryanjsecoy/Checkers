@@ -33,21 +33,19 @@ public class CheckersGUI extends JFrame {
     private void addListeners() {
     }
 
+    /**
+     * Creates components to display and interact with the game
+     */
     private void createComponents() {
         mainPanel = new JPanel();
         listener = new CheckersListener(this);
     }
 
     /**
-     * getBoardPanel - getter method for BoardPanel
-     * @return boardPanel
+     * setPanels - sets up and adds panels to the mainPanel
      */
-    public BoardPanel getBoardPanel() {
-        return this.boardPanel;
-    }
-
     private void setPanels() {
         mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.X_AXIS));
-        mainPanel.add(boardPanel.getBoardPanel());
+        mainPanel.add(boardPanel);
     }
 }

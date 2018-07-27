@@ -9,8 +9,8 @@ public class CheckersGame {
 
     //Declarations
     private BoardData boardData;
-    private Player redPlayer;
-    private Player blackPlayer;
+    private Player playerOne;
+    private Player playerTwo;
     private static final int BLACK = 0;
     private static final int RED = 1;
 
@@ -19,8 +19,8 @@ public class CheckersGame {
      */
     public CheckersGame() {
         boardData = BoardData.getBoard();
-        redPlayer = new Player(RED);
-        blackPlayer = new Player(BLACK);
+        playerOne = new Player(RED);
+        playerTwo = new Player(BLACK);
     }
 
     /**
@@ -41,9 +41,9 @@ public class CheckersGame {
         Player choice;
 
         if (which == BLACK)
-            choice = blackPlayer;
+            choice = playerTwo;
         else if (which == RED) {
-            choice = redPlayer;
+            choice = playerOne;
         }
         else {
             choice = null;

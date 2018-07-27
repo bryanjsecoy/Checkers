@@ -4,45 +4,57 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.Color;
 
-class BoardPanel {
+class BoardPanel extends JPanel{
 
-    private static JPanel boardPanel;
+    private JPanel[][] squares;
 
+    /**
+     * Constructor method. Panel is 8x8 with alternating colored JPanels.
+     */
     BoardPanel() {
-        boardPanel = new JPanel();
-        boardPanel.setLayout(new GridLayout(8,8));
+        this.setLayout(new GridLayout(8,8));
+        squares = new JPanel[8][8];
         paintBoard();
-        boardPanel.setSize(50,50);
+        //drawCheckers();
+        setSize(50,50);
+    }
+
+    private void drawCheckers() {
+
     }
 
     private void paintBoard() {
         for (int row = 0; row < 8; row++) {
             // Even numbered rows (w,b,w,b,w,b,w,b)
-
             for (int col = 0; col < 8; col+=2) {
                 if (row % 2 == 0) {
-                    JPanel panel = new JPanel();
-                    JPanel panelTwo = new JPanel();
-                    panel.setBackground(Color.WHITE);
-                    panelTwo.setBackground(Color.BLACK);
-                    boardPanel.add(panel);
-                    boardPanel.add(panelTwo);
-
+                    squares[row][col] = new JPanel();
+                    squares[row][col+1] = new JPanel();
+                    squares[row][col].setBackground(Color.WHITE);
+                    squares[row][col + 1].setBackground(Color.GRAY);
+                    add(squares[row][col]);
+                    add(squares[row][col+1]);
                 }
                 // Odd numbered rows (b,w,b,w,b,w,b,w)
                 else {
-                    JPanel panel = new JPanel();
-                    JPanel panelTwo = new JPanel();
-                    panel.setBackground(Color.BLACK);
-                    panelTwo.setBackground(Color.WHITE);
-                    boardPanel.add(panel);
-                    boardPanel.add(panelTwo);
+                    squares[row][col] = new JPanel();
+                    squares[row][col+1] = new JPanel();
+                    squares[row][col].setBackground(Color.GRAY);
+                    squares[row][col + 1].setBackground(Color.WHITE);
+                    add(squares[row][col]);
+                    add(squares[row][col+1]);
                 }
             }
         }
     }
 
-    Component getBoardPanel() {
-        return boardPanel;
+    /**
+     * getSquare - gets the desired square
+     * @param row - the row
+     * @param col - the column
+     * @return squares[row][col] - The JPanel located in the requested row/column
+     */
+    public JPanel getSquare(int row, int col) {
+        return squares[row][col];
     }
 }
