@@ -1,4 +1,4 @@
-package Test;
+package test;
 
 import model.Player;
 import org.junit.Test;
