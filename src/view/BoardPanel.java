@@ -28,13 +28,12 @@ class BoardPanel extends JPanel{
             for (int col = 0; col < 8; col++) {
                 if (row % 2 == 0) {
                     squares[row][col] = new JPanel();
-                    squares[row][col].setLayout(new FlowLayout());
+                    squares[row][col].setLayout(null);
                     if (col % 2 == 0) {                                     // Even or odd column
                         squares[row][col].setBackground(Color.WHITE);
                         squares[row][col].add(new Piece(0));
                     } else {
                         squares[row][col].setBackground(Color.GRAY);
-                        squares[row][col].add(new Piece(0));
                     }
 
                     add(squares[row][col]);

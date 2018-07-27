@@ -32,6 +32,7 @@ public class CheckersGUI extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setContentPane(mainPanel);
         //pack();
+        setResizable(false);
         setVisible(true);
     }
 

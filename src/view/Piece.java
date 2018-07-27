@@ -1,8 +1,7 @@
 package view;
 
 import javax.swing.*;
-import java.awt.Color;
-import java.awt.Graphics;
+import java.awt.*;
 
 /**
  * Piece - Draws a checker
@@ -11,11 +10,11 @@ import java.awt.Graphics;
  */
 public final class Piece extends JPanel {
 
-    private int type, x, y;
-    private final static int DIMENSION = 50;
+    private int type;
 
     Piece(int type) {
         this.type = type;
+        setSize( 80,80);
     }
 
 
@@ -24,17 +23,11 @@ public final class Piece extends JPanel {
      * @param g -
      */
 
-    public void paint(Graphics g)
+    public void paintComponent(Graphics g)
     {
         System.out.println("Drawing a checker");
-
-        // Set checker color
         g.setColor(Color.RED);
-
-        // Paint checker
-        g.fillOval(x - DIMENSION / 2, y - DIMENSION / 2, DIMENSION, DIMENSION);
-        g.setColor(Color.WHITE);
-        g.drawOval(x - DIMENSION / 2, y - DIMENSION / 2, DIMENSION, DIMENSION);
-
+        g.fillOval(3,3,20,20);
+        g.drawOval(3,3,20,20);
     }
 }
