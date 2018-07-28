@@ -10,11 +10,13 @@ import java.awt.*;
  */
 public final class Piece extends JPanel {
 
-    private int type;
+    private int type;       // 0 = normal piece, 1 = king
+    private int player;     // Black = 0, Red = 1
 
-    Piece(int type) {
+    Piece(int type, int player) {
         this.type = type;
-        setSize( 80,80);
+        this.player = player;
+        setSize( 100,100);
     }
 
 
@@ -25,9 +27,14 @@ public final class Piece extends JPanel {
 
     public void paintComponent(Graphics g)
     {
+        if (type == 0 && player == 1) {
+            g.setColor(Color.RED);
+        }
+        if (type == 0 && player == 0)
+            g.setColor(Color.BLACK);
+
+        g.fillOval(4, 4, 50, 50);
+        g.drawOval(4, 4, 50, 50);
         System.out.println("Drawing a checker");
-        g.setColor(Color.RED);
-        g.fillOval(3,3,20,20);
-        g.drawOval(3,3,20,20);
     }
 }

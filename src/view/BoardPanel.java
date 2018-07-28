@@ -18,33 +18,56 @@ class BoardPanel extends JPanel{
         this.setLayout(new GridLayout(8,8));
         squares = new JPanel[8][8];
         paintBoard();
-        //drawCheckers();
+        drawCheckers();
         setSize(50,50);
+    }
+
+    private void drawCheckers() {
+        // Set up black checkers for player one
+        for (int i = 0; i < 3; i++) {
+            if (i == 0 || i == 2) {
+                for (int j = 0; j < 8; j += 2)
+                    squares[i][j].add(new Piece(0, 0));
+            }
+
+            if (i == 1) {
+                for (int j = 1; j < 8; j+=2)
+                    squares[i][j].add(new Piece(0, 0));
+            }
+        }
+
+        //set up red checkers for player two
+        for (int i = 5; i < 8; i++) {
+            if (i == 5 || i == 7) {
+                for (int j = 1; j < 8; j += 2)
+                    squares[i][j].add(new Piece(0, 1));
+            }
+
+            if (i == 6) {
+                for (int j = 0; j < 8; j+=2)
+                    squares[i][j].add(new Piece(0, 1));
+            }
+        }
     }
 
     private void paintBoard() {
         for (int row = 0; row < 8; row++) {
             // Even numbered rows (w,b,w,b,w,b,w,b)
             for (int col = 0; col < 8; col++) {
+                squares[row][col] = new JPanel();
+                squares[row][col].setLayout(null);
                 if (row % 2 == 0) {
-                    squares[row][col] = new JPanel();
-                    squares[row][col].setLayout(null);
-                    if (col % 2 == 0) {                                     // Even or odd column
+                    if (col % 2 == 0)                                     // Even or odd column
                         squares[row][col].setBackground(Color.WHITE);
-                        squares[row][col].add(new Piece(0));
-                    } else {
+                    else
                         squares[row][col].setBackground(Color.GRAY);
-                    }
 
                     add(squares[row][col]);
                 }
                 // Odd numbered rows (b,w,b,w,b,w,b,w)
                 else {
-                    squares[row][col] = new JPanel();
-                    squares[row][col].setLayout(new FlowLayout());
                     if (col % 2 == 0)                                     // Even or odd column
                         squares[row][col].setBackground(Color.GRAY);
-
                     else
                         squares[row][col].setBackground(Color.WHITE);
 
