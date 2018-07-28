@@ -27,6 +27,9 @@ public final class Piece extends JPanel {
 
     public void paintComponent(Graphics g)
     {
+        super.paintComponent(g);
+        setBackground(Color.GRAY);
+
         if (type == 0 && player == 1) {
             g.setColor(Color.RED);
         }
@@ -35,6 +38,10 @@ public final class Piece extends JPanel {
 
         g.fillOval(4, 4, 50, 50);
         g.drawOval(4, 4, 50, 50);
-        System.out.println("Drawing a checker");
+
+        // If the piece is a king
+        if (type == 1) {
+            g.drawString("K", 0,0);
+        }
     }
 }

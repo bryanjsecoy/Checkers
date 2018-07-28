@@ -1,8 +1,8 @@
 package view;
 
 import javax.swing.*;
+import javax.swing.border.EtchedBorder;
 import java.awt.*;
-import java.awt.Color;
 
 /**
  * BoardPanel - JPanel that contains an 8x8 grid, made up of alternating colored panels (The playing board)
@@ -10,28 +10,32 @@ import java.awt.Color;
 class BoardPanel extends JPanel{
 
     private JPanel[][] squares;         // Array of JPanels that represent squares on the board
-
+    EtchedBorder border;
     /**
      * Constructor method. Panel is 8x8 with alternating colored JPanels.
      */
     BoardPanel() {
-        this.setLayout(new GridLayout(8,8));
-        squares = new JPanel[8][8];
-        paintBoard();
-        drawCheckers();
-        setSize(50,50);
+
+         border = new EtchedBorder();
+         this.setLayout(new GridLayout(8,8,1 , 1));
+         squares = new JPanel[8][8];
+         paintBoard();
+         drawCheckers();
+         setSize(50,50);
     }
 
     private void drawCheckers() {
         // Set up black checkers for player one
         for (int i = 0; i < 3; i++) {
             if (i == 0 || i == 2) {
-                for (int j = 0; j < 8; j += 2)
+                for (int j = 1; j < 8; j += 2) {
                     squares[i][j].add(new Piece(0, 0));
+                    squares[i][j].setOpaque(false);
+                }
             }
 
             if (i == 1) {
-                for (int j = 1; j < 8; j+=2)
+                for (int j = 0; j < 8; j+=2)
                     squares[i][j].add(new Piece(0, 0));
             }
         }
@@ -39,12 +43,12 @@ class BoardPanel extends JPanel{
         //set up red checkers for player two
         for (int i = 5; i < 8; i++) {
             if (i == 5 || i == 7) {
-                for (int j = 1; j < 8; j += 2)
+                for (int j = 0; j < 8; j += 2)
                     squares[i][j].add(new Piece(0, 1));
             }
 
             if (i == 6) {
-                for (int j = 0; j < 8; j+=2)
+                for (int j = 1; j < 8; j+=2)
                     squares[i][j].add(new Piece(0, 1));
             }
         }
@@ -57,19 +61,27 @@ class BoardPanel extends JPanel{
                 squares[row][col] = new JPanel();
                 squares[row][col].setLayout(null);
                 if (row % 2 == 0) {
-                    if (col % 2 == 0)                                     // Even or odd column
+                    if (col % 2 == 0) {                                   // Even or odd column
                         squares[row][col].setBackground(Color.WHITE);
-                    else
+                        squares[row][col].setBorder(border);
+                    }
+                    else {
                         squares[row][col].setBackground(Color.GRAY);
+                        squares[row][col].setBorder(border);
+                    }
 
                     add(squares[row][col]);
                 }
                 // Odd numbered rows (b,w,b,w,b,w,b,w)
                 else {
-                    if (col % 2 == 0)                                     // Even or odd column
+                    if (col % 2 == 0) {                                  // Even or odd column
                         squares[row][col].setBackground(Color.GRAY);
-                    else
+                        squares[row][col].setBorder(border);
+                    }
+                    else {
                         squares[row][col].setBackground(Color.WHITE);
+                        squares[row][col].setBorder(border);
+                    }
 
                     add(squares[row][col]);
                 }

@@ -8,7 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Checkers/view/BoardPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Checkers/view/BoardPanel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/BoardPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/BoardPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/CheckersGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/CheckersGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Piece.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -29,7 +28,7 @@
       <file leaf-file-name="CheckersGame.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/CheckersGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
+            <state>
               <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
             </state>
           </provider>
@@ -50,12 +49,12 @@
       <file leaf-file-name="BoardPanel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/BoardPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="26" column="51" lean-forward="true" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
+            <state relative-caret-position="170">
+              <caret line="20" column="36" lean-forward="true" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2265#2266#0" expanded="true" />
-                <element signature="e#2305#2306#0" expanded="true" />
+                <element signature="e#3227#3228#0" expanded="true" />
+                <element signature="e#3267#3268#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -64,8 +63,8 @@
       <file leaf-file-name="Piece.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/view/Piece.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+            <state relative-caret-position="193">
+              <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -128,8 +127,8 @@
         <option value="$PROJECT_DIR$/src/view/DrawChecker.java" />
         <option value="$PROJECT_DIR$/src/view/Checker.java" />
         <option value="$PROJECT_DIR$/src/Checkers/Checkers.java" />
-        <option value="$PROJECT_DIR$/src/view/BoardPanel.java" />
         <option value="$PROJECT_DIR$/src/view/CheckersGUI.java" />
+        <option value="$PROJECT_DIR$/src/view/BoardPanel.java" />
         <option value="$PROJECT_DIR$/src/view/Piece.java" />
       </list>
     </option>
@@ -144,10 +143,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1445" />
-    <option name="y" value="-111" />
-    <option name="width" value="1028" />
-    <option name="height" value="521" />
+    <option name="x" value="-12" />
+    <option name="y" value="-12" />
+    <option name="width" value="3026" />
+    <option name="height" value="2026" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -393,7 +392,7 @@
       <workItem from="1532549230257" duration="12355000" />
       <workItem from="1532612720434" duration="1367000" />
       <workItem from="1532614111931" duration="6348000" />
-      <workItem from="1532706304415" duration="15977000" />
+      <workItem from="1532706304415" duration="23791000" />
     </task>
     <task id="LOCAL-00001" summary="update tests, fix bugs">
       <created>1532551378088</created>
@@ -458,7 +457,21 @@
       <option name="project" value="LOCAL" />
       <updated>1532719998401</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Red circles">
+      <created>1532722372640</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1532722372640</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Draw checkers on board">
+      <created>1532798217577</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1532798217577</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -494,11 +507,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56145000" />
+    <option name="totallyTimeSpent" value="63959000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1927" y="-287" width="1295" height="695" extended-state="6" />
-    <editor active="true" />
+    <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5003903" side_tool="true" weight="0.2254025" />
@@ -510,16 +522,16 @@
       <window_info id="Structure" order="1" sideWeight="0.5008881" side_tool="true" weight="0.1400934" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39534885" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39498806" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.32737032" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.32696897" />
       <window_info anchor="right" id="Palette&#9;" order="9" />
       <window_info id="Image Layers" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49960968" visible="true" weight="0.2254025" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49960968" visible="true" weight="0.34725538" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4991119" visible="true" weight="0.167057" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4991119" visible="true" weight="0.14276184" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32737032" />
       <window_info id="Learn" order="6" />
       <window_info anchor="right" id="SciView" order="8" />
@@ -549,7 +561,9 @@
     <MESSAGE value="Change squares to 8x8 JPanel array" />
     <MESSAGE value="Work on Piece class" />
     <MESSAGE value="Red squares" />
-    <option name="LAST_COMMIT_MESSAGE" value="Red squares" />
+    <MESSAGE value="Red circles" />
+    <MESSAGE value="Draw checkers on board" />
+    <option name="LAST_COMMIT_MESSAGE" value="Draw checkers on board" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -563,17 +577,10 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="8" />
+      <option name="time" value="10" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/model/CheckersGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="40" lean-forward="true" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/Checker.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -792,7 +799,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/CheckersGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
+        <state>
           <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
         </state>
       </provider>
@@ -810,18 +817,6 @@
           <caret line="203" selection-start-line="203" selection-end-line="203" />
           <folding>
             <element signature="e#5315#5316#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/javax/swing/JPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="117" selection-start-line="117" selection-end-line="117" />
-          <folding>
-            <element signature="e#2949#2950#0" expanded="true" />
-            <element signature="e#3005#3006#0" expanded="true" />
-            <element signature="e#3132#3133#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -870,18 +865,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/BoardPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="26" column="51" lean-forward="true" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2265#2266#0" expanded="true" />
-            <element signature="e#2305#2306#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/CheckersGUI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="385">
@@ -892,10 +875,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/javax/swing/JPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="116" selection-start-line="116" selection-end-line="116" />
+          <folding>
+            <element signature="e#2949#2950#0" expanded="true" />
+            <element signature="e#3005#3006#0" expanded="true" />
+            <element signature="e#3158#3159#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/Container.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="433" selection-start-line="433" selection-end-line="433" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/BoardPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="20" column="36" lean-forward="true" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3227#3228#0" expanded="true" />
+            <element signature="e#3267#3268#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/Piece.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+        <state relative-caret-position="193">
+          <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
