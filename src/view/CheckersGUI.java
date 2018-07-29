@@ -37,6 +37,7 @@ public class CheckersGUI extends JFrame {
     }
 
     private void addListeners() {
+        this.addMouseListener(listener);
     }
 
     /**

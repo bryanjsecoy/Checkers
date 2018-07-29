@@ -4,16 +4,17 @@ import model.Player;
 import model.CheckersGame;
 import view.CheckersGUI;
 
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
-import java.awt.event.WindowListener;
+import java.awt.*;
+import java.awt.event.*;
 
 /**
  * CheckersListener - handles events generated from CheckersGUI
  * @author Bryan Secoy
  * @version 1
  */
-public class CheckersListener extends WindowAdapter implements WindowListener {
+public class CheckersListener extends WindowAdapter implements WindowListener, MouseListener {
+
+    private static Component piece;
 
     /**
      * Explicit value constructor
@@ -39,5 +40,31 @@ public class CheckersListener extends WindowAdapter implements WindowListener {
     }
 
     private void endGame() {
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        piece = (e.getComponent());
+        System.out.println(piece.toString());
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+
     }
 }
